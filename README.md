@@ -6,3 +6,4 @@
 |[Исследование объявлений о продаже квартир](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Исследование%20объявлений%20о%20продаже%20квартир)| Научиться определять рыночную стоимость объектов недвижимости в Санкт-Петербурге. | Pandas, Matplotlib, Numpy |
 |[Cервис аренды самокатов GoFast](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Cервис%20аренды%20самокатов%20GoFast)| Влияние тарифов на результаты пользования сервисом. Проверка гипотез. | Pandas, Matplotlib, Numpy, Scipy |
 |[Сборный проект — 1](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Сборный%20проект%20—%201)| Выявить закономерности успешных продаж компьютерных игр в трёх регионах мира. | Pandas, Numpy, Matplotlib, Scipy, Re |
+|[Базовый SQL](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Базовый%20SQL)| Отработка навыков SQL запросов к базе данных, которая хранит информацию о венчурных фондах и инвестициях в компании-стартапы. | SQL |
