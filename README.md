@@ -7,3 +7,4 @@
 | 4. |[Cервис аренды самокатов GoFast](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Cервис%20аренды%20самокатов%20GoFast)| Влияние тарифов на результаты пользования сервисом. Проверка гипотез. | Pandas, Matplotlib, Numpy, Scipy |
 | 5. |[Сборный проект — 1](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Сборный%20проект%20—%201)| Выявить закономерности успешных продаж компьютерных игр в трёх регионах мира. | Pandas, Numpy, Matplotlib, Scipy, Re |
 | 6. |[Базовый SQL](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Базовый%20SQL)| Отработка навыков SQL запросов к базе данных, которая хранит информацию о венчурных фондах и инвестициях в компании-стартапы. | SQL |
+| 7. |[Анализ бизнес-показателей](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Анализ%20бизнес-показателей)| Разобраться в причинах убыточности приложения Procrastinate Pro+ на основе анализа бизнес-метрик | Pandas, Matplotlib, Numpy |
