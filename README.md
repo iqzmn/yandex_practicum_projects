@@ -1,10 +1,11 @@
-# Данные проекты реализованы во время обучения в Яндекс.Практикуме по специальности "Аналитик данных"
-| № | Название проекта | Описание | Используемые библиотеки | 
+# Данные проекты реализованы во время обучения в Яндекс.Практикум по специальности "Аналитик данных"
+| № | Название проекта | Описание | Используемые инструменты | 
 |:---:| :---------------------- | :---------------------- | :---------------------- |
 | 1. | [Музыка больших городов](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Музыка%20больших%20городов) | Проверить три гипотезы поведения пользователей сервиса Яндекс.Музыка из Москвы и Санкт-Петебурга. | Pandas, Jupyter Notebook |
 | 2. | [Исследование надёжности заёмщиков](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Исследование%20надёжности%20заёмщиков) | Влияет ли семейное положение и количество детей клиента на факт погашения кредита в срок. | Pandas, Jupyter Notebook |
 | 3. |[Исследование объявлений о продаже квартир](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Исследование%20объявлений%20о%20продаже%20квартир)| Научиться определять рыночную стоимость объектов недвижимости в Санкт-Петербурге. | Pandas, Matplotlib, Numpy, Jupyter Notebook |
 | 4. |[Cервис аренды самокатов GoFast](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Cервис%20аренды%20самокатов%20GoFast)| Влияние тарифов на результаты пользования сервисом. Проверка гипотез. | Pandas, Matplotlib, Numpy, Scipy, Jupyter Notebook |
 | 5. |[Сборный проект — 1](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Сборный%20проект%20—%201)| Выявить закономерности успешных продаж компьютерных игр в трёх регионах мира. | Pandas, Numpy, Matplotlib, Scipy, Re, Jupyter Notebook |
-| 6. |[Базовый SQL](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Базовый%20SQL)| Отработка навыков SQL запросов к базе данных, которая хранит информацию о венчурных фондах и инвестициях в компании-стартапы. | SQL |
-| 7. |[Анализ бизнес-показателей](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Анализ%20бизнес-показателей)| Разобраться в причинах убыточности приложения Procrastinate Pro+ на основе анализа бизнес-метрик | Pandas, Matplotlib, Numpy, Jupyter Notebook |
+| 6. |[Базовый SQL](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Базовый%20SQL)| Отработка навыков SQL запросов к базе данных с ресурса [Kaggle](https://www.kaggle.com), которая хранит информацию о венчурных фондах и инвестициях в компании-стартапы. | SQL(PostgreSQL) |
+| 7. |[Анализ бизнес-показателей](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Анализ%20бизнес-показателей)| Разобраться в причинах убыточности приложения Procrastinate Pro+ на основе анализа бизнес-метрик. | Pandas, Matplotlib, Numpy, Jupyter Notebook |
+| 8. |[Продвинутый SQL](https://github.com/iqzmn/yandex_practicum_projects/tree/main/Продвинутый%20SQL)| Отработка аналитических навыков с помощью SQL запросов к базе данных [StackOverflow](https://stackoverflow.com/) — сервиса вопросов и ответов о программировании. | SQL(PostgreSQL ) |
