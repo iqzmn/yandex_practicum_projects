@@ -313,42 +313,28 @@ WHERE c.funding_total <> 0
 	- общая сумма сделок по покупкам в этом месяце.
 
 ```SQL
-WITH fd AS
-  (SELECT name AS fund_name,
-          id
-   FROM fund
-   WHERE country_code = 'USA' ),
-     inv AS
-  (SELECT fund_name,
-          funding_round_id
-   FROM investment AS i
-   LEFT JOIN fd ON i.fund_id = fd.id),
-     ac AS
-  (SELECT EXTRACT(MONTH
-                  FROM CAST(acquired_at AS date)) AS deal_month,
-          count(acquired_company_id) AS count_acquired,
-          SUM(price_amount) AS sum_acquired
-   FROM acquisition
-   WHERE EXTRACT(YEAR
-                 FROM CAST(acquired_at AS date)) BETWEEN 2010 AND 2013
-   GROUP BY EXTRACT(MONTH
-                    FROM CAST(acquired_at AS date))),
-     main AS
-  (SELECT EXTRACT(MONTH
-                  FROM funded_at) AS month_num,
-          count(DISTINCT inv.fund_name) AS funds_name
-   FROM funding_round AS f
-   LEFT JOIN inv ON f.id = inv.funding_round_id
-   WHERE EXTRACT(YEAR
-                 FROM funded_at) BETWEEN 2010 AND 2013
-   GROUP BY EXTRACT(MONTH
-                    FROM funded_at))
-SELECT main.month_num,
-       main.funds_name,
-       ac.count_acquired,
-       ac.sum_acquired
-FROM main
-JOIN ac ON main.month_num = ac.deal_month;
+WITH 
+acq AS
+    (SELECT EXTRACT(MONTH FROM acquired_at) months,
+            sum(price_amount) AS sum_deal_price,
+            count(*) acquired_companies_count
+     FROM acquisition
+     WHERE EXTRACT(YEAR FROM acquired_at) BETWEEN 2010 AND 2013
+     GROUP BY months),
+funds AS
+    (SELECT EXTRACT(MONTH FROM funded_at) months,
+            count(DISTINCT f.name) fund_names_count
+     FROM funding_round fr
+     LEFT JOIN investment i ON fr.id = i.funding_round_id
+     LEFT JOIN fund f ON i.fund_id = f.id
+     WHERE EXTRACT(YEAR FROM funded_at) BETWEEN 2010 AND 2013 AND country_code = 'USA'
+     GROUP BY months)
+SELECT acq.months,
+       fund_names_count,
+       acquired_companies_count,
+       sum_deal_price
+FROM acq
+JOIN funds ON acq.months = funds.months
 ```
 23. Составьте сводную таблицу и выведите среднюю сумму инвестиций для стран, в которых есть стартапы, зарегистрированные в 2011, 2012 и 2013 годах. Данные за каждый год должны быть в отдельном поле. Отсортируйте таблицу по среднему значению инвестиций за 2011 год от большего к меньшему.
 ```SQL
