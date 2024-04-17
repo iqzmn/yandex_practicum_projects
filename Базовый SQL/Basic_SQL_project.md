@@ -8,17 +8,15 @@ WHERE status = 'closed';
 ```SQL
 SELECT funding_total
 FROM company
-WHERE category_code = 'news'
-  AND country_code = 'USA'
+WHERE category_code = 'news' AND country_code = 'USA'
 ORDER BY funding_total DESC;
 ```
 3. Найдите общую сумму сделок по покупке одних компаний другими в долларах. Отберите сделки, которые осуществлялись только за наличные с 2011 по 2013 год включительно.
 ```SQL
 SELECT sum(price_amount)
 FROM acquisition
-WHERE term_code = 'cash'
-  AND (EXTRACT(YEAR
-               FROM CAST(acquired_at AS date)) BETWEEN 2011 AND 2013);
+WHERE term_code = 'cash' AND
+		(EXTRACT(YEAR FROM CAST(acquired_at AS date)) BETWEEN 2011 AND 2013);
 ```
 4.  Отобразите имя, фамилию и названия аккаунтов людей в поле network_username, у которых названия аккаунтов начинаются на `Silver`.
 ```SQL
@@ -32,13 +30,11 @@ WHERE network_username like 'Silver%';
 ```SQL
 SELECT *
 FROM people
-WHERE network_username like '%money%'
-  AND last_name like 'K%';
+WHERE network_username like '%money%' AND last_name like 'K%';
 ```
 6.  Для каждой страны отобразите общую сумму привлечённых инвестиций, которые получили компании, зарегистрированные в этой стране. Страну, в которой зарегистрирована компания, можно определить по коду страны. Отсортируйте данные по убыванию суммы.
 ```SQL
-SELECT country_code,
-       sum(funding_total) AS summa
+SELECT country_code, sum(funding_total) AS summa
 FROM company
 GROUP BY country_code
 ORDER BY summa DESC;
@@ -53,8 +49,7 @@ FROM
           max(raised_amount) AS max_sum
    FROM funding_round
    GROUP BY funded_at) AS f
-WHERE min_sum <> 0
-  AND min_sum <> max_sum;
+WHERE min_sum <> 0 AND min_sum <> max_sum;
 ```
 8.  Создайте поле с категориями:
 
@@ -338,31 +333,23 @@ JOIN funds ON acq.months = funds.months
 ```
 23. Составьте сводную таблицу и выведите среднюю сумму инвестиций для стран, в которых есть стартапы, зарегистрированные в 2011, 2012 и 2013 годах. Данные за каждый год должны быть в отдельном поле. Отсортируйте таблицу по среднему значению инвестиций за 2011 год от большего к меньшему.
 ```SQL
-WITH inv_2011 AS
-  (SELECT country_code,
-          avg(funding_total) AS avg2011
-   FROM company
-   WHERE EXTRACT(YEAR
-                 FROM founded_at) = 2011
-   GROUP BY country_code),
-     inv_2012 AS
-  (SELECT country_code,
-          avg(funding_total) AS avg2012
-   FROM company
-   WHERE EXTRACT(YEAR
-                 FROM founded_at) = 2012
-   GROUP BY country_code),
-     inv_2013 AS
-  (SELECT country_code,
-          avg(funding_total) AS avg2013
-   FROM company
-   WHERE EXTRACT(YEAR
-                 FROM founded_at) = 2013
-   GROUP BY country_code)
-SELECT inv_2011.country_code,
-       avg2011,
-       avg2012,
-       avg2013
+WITH
+inv_2011 AS (SELECT country_code, avg(funding_total) AS avg2011
+   	FROM company
+   	WHERE EXTRACT(YEAR FROM founded_at) = 2011
+   	GROUP BY country_code),
+
+inv_2012 AS (SELECT country_code, avg(funding_total) AS avg2012
+   	FROM company
+   	WHERE EXTRACT(YEAR FROM founded_at) = 2012
+   	GROUP BY country_code),
+
+inv_2013 AS (SELECT country_code, avg(funding_total) AS avg2013
+   	FROM company
+   	WHERE EXTRACT(YEAR FROM founded_at) = 2013
+   	GROUP BY country_code)
+
+SELECT inv_2011.country_code, avg2011, avg2012, avg2013
 FROM inv_2011
 INNER JOIN inv_2012 ON inv_2011.country_code = inv_2012.country_code
 INNER JOIN inv_2013 ON inv_2011.country_code = inv_2013.country_code
