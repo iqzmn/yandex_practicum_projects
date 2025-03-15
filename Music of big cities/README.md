@@ -1,37 +1,33 @@
-### Цель проекта.
-Проверить гипотезы о музыкальных предпочтениях пользователей Яндекс Музыки из Москвы и Санкт-Петербурга на реальных данных.
+# Project Objective
+To test hypotheses about the musical preferences of Yandex Music users from Moscow and St. Petersburg using real data.
 
-### Гипотезы.
-1. Активность пользователей меняется в зависимости от дня недели, причём в Москве и Санкт-Петербурге эти изменения различны.
-2. В Москве и Санкт-Петербурге в понедельник утром преобладают разные музыкальные жанры. То же самое можно сказать и о вечере пятницы — выбор жанра зависит от города.
-3. Москва и Санкт-Петербург имеют разные музыкальные предпочтения: в Москве больше слушают поп-музыку, а в Петербурге — русский рэп.
+# Hypotheses
+1. User activity varies depending on the day of the week, and these patterns differ between Moscow and St. Petersburg.
+2. Different music genres dominate in Moscow and St. Petersburg on Monday mornings. The same applies to Friday evenings — genre preferences depend on the city.
+3. Moscow and St. Petersburg have different musical preferences: Moscow users listen to more pop music, while St. Petersburg users prefer Russian rap.
 
-### Данные.
-Данные о поведении пользователей хранятся в файле `yndx_music.csv`. О качестве данных ничего не известно.  
+# Data
+User behavior data is stored in the `yndx_music.csv` file. The quality of the data is unknown.
+Column names:
+* `userID` — user identifier
+* `Track` — track name
+* `artist` — artist name
+* `genre` — genre name
+* `City` — user's city
+* `time` — listening start time
+* `Day` — day of the week
 
-Названия колонок:
-- `userID` — идентификатор пользователя;
-- `Track` — название трека;
-- `artist` — имя исполнителя;
-- `genre` — название жанра;
-- `City` — город пользователя;
-- `time` — время начала прослушивания;
-- `Day` — день недели.
+# Research Stages
+1. Data overview
+2. Data preprocessing
+3. Testing hypotheses
+4. Research conclusion
 
-### Этапы исследования.
-1. Обзор данных.
-2. Предобработка данных.
-3. Проверка гипотез.
-4. Итог исследования.
-
-### Итог исследования.
-Проверив гипотезы, мы установили:
-
-1. В Москве и Санкт-Петербурге активность пользователей зависит от дня недели. Первая гипотеза полностью подтвердилась.
-
-2. Жанры музыки, которые слушают пользователи, не сильно отличаются в течение недели в обоих городах. Единственное исключение — понедельник, когда:
-- москвичи предпочитают музыку жанра “world”,
-- петербуржцы — джаз и классику.
-Вторая гипотеза подтверждается частично, т.к. данные имеют пропуски, которые могут влиять на результат.
-
-3. Москва и Санкт-Петербург имеют схожие музыкальные вкусы. Различия в жанрах не выражены среди большинства пользователей. Третья гипотеза не находит подтверждения в данных.
+# Research Conclusion
+After testing the hypotheses, we established:
+1. In both Moscow and St. Petersburg, user activity depends on the day of the week. The first hypothesis is fully confirmed.
+2. The music genres that users listen to don't significantly differ throughout the week in both cities. The only exception is Monday, when:
+   * Moscow users prefer "world" music
+   * St. Petersburg users prefer jazz and classical music
+   The second hypothesis is partially confirmed, as data has missing values that may affect the results.
+3. Moscow and St. Petersburg have similar musical tastes. Genre differences are not pronounced among the majority of users. The third hypothesis is not supported by the data.
