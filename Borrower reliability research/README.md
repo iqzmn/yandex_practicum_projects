@@ -1,70 +1,77 @@
-### Цель проекта.  
-При анализе статистики о платежеспособности клиентов банка возникает вопрос о влиянии семейного положения и количества детей на факт своевременного погашения кредита. Ответ на этот вопрос является целью данного проекта и имеет большое значение для банковского сектора, поскольку позволяет лучше понять риски, связанные с выдачей кредитов.
-Ещё одним важным моментом является общий финансовый статус семьи, уровень дохода и финансовая дисциплина клиента. Банки и другие кредиторы должны учитывать все эти факторы при принятии решения о выдаче кредита, чтобы минимизировать риски и обеспечить свою платежеспособность.  
-Результаты данного исследования будут учтены при разработке модели кредитного скоринга. Кредитный скоринг является важным инструментом для финансовых учреждений при принятии решений о выдаче кредитов. Он основывается на статистическом анализе различных факторов, таких как история платежей, уровень дохода, возраст, образование и другие, которые могут влиять на способность заемщика выплатить кредит вовремя.  
-Для разработки модели кредитного скориннга будут использованы методы машинного обучения. Целевой переменной является признак, который показывает была ли в истории у клиента задолженность или нет.  
+### **Project Goal**  
+When analyzing bank clients' creditworthiness statistics, the question arises about the impact of marital status and the number of children on timely loan repayment. Answering this question is the goal of this project and holds great significance for the banking sector, as it helps better understand the risks associated with issuing loans. Another crucial aspect is the overall financial status of the family, income level, and financial discipline of the client. Banks and other lenders must consider all these factors when making loan decisions to minimize risks and ensure their financial stability.  
 
-### В процессе работы над проектом мы ответим на вопросы:  
-- есть ли зависимость между количеством детей и возвратом кредита в срок?
-- есть ли зависимость между семейным положением и возвратом кредита в срок?
-- есть ли зависимость между уровнем дохода и возвратом кредита в срок?
-- как разные цели кредита влияют на его возврат в срок?
+The findings of this study will be used to develop a **credit scoring model**. Credit scoring is an important tool for financial institutions in deciding loan approvals. It is based on statistical analysis of various factors, such as **payment history, income level, age, education, and other variables** that may influence a borrower’s ability to repay the loan on time.  
 
-### Данные о платёжеспособности клиентов имеют следующие критерии:  
-- `children` — количество детей в семье;
-- `days_employed` — общий трудовой стаж в днях;
-- `dob_years` — возраст клиента в годах;
-- `education` — уровень образования клиента;
-- `education_id` — идентификатор уровня образования;
-- `family_status` — семейное положение;
-- `family_status_id` — идентификатор семейного положения;
-- `gender` — пол клиента;
-- `income_type` — тип занятости;
-- `debt` — имел ли задолженность по возврату кредитов;
-- `total_income` — ежемесячный доход;
-- `purpose` — цель получения кредита.
+Machine learning methods will be used to develop the credit scoring model. The target variable is an indicator that shows whether the client had past loan defaults or not.  
 
-### Основные этапы проекта:  
-1. Загрузка данных.
-2. Исследовательский анализ данных.
-3. Вопросы исследования.
-4. Машинное обучение.
-5. Общий вывод.
+### **Project Objectives**  
+During the project, we will answer the following questions:  
+- Is there a relationship between the number of children and on-time loan repayment?  
+- Is there a relationship between marital status and on-time loan repayment?  
+- Is there a relationship between income level and on-time loan repayment?  
+- How do different loan purposes affect repayment on time?  
 
-### Общий вывод.  
-Предоставленные данные были получены в текстовом формате и требовали предварительной обработки для дальнейшего анализа. В ходе исследовательского анализа данных были предприняты следующие действия:  
-- Обнаружены и удалены явные и неявные дубликаты  
-- Удалены пропуски  
-- Изменены типы некоторых признаков  
-- Исправленв отрицательные значения  
-- Удалены выбросы  
-- Сделана категоризация некоторых признаков  
+### **Client Creditworthiness Data Includes the Following Criteria:**  
+- `children` — number of children in the family  
+- `days_employed` — total work experience in days  
+- `dob_years` — client’s age in years  
+- `education` — client’s education level  
+- `education_id` — education level identifier  
+- `family_status` — marital status  
+- `family_status_id` — marital status identifier  
+- `gender` — client’s gender  
+- `income_type` — type of employment  
+- `debt` — whether the client had past loan defaults  
+- `total_income` — monthly income  
+- `purpose` — purpose of obtaining the loan  
 
-Анализ показал, что люди со средним образованием чаще берут кредиты, далее идут клиенты с высшим образованием. Клиенты с неоконченным высшим, начальным образованием, а также с учёной степенью реже берут кредит.  
-Находящиеся в браке чаще берут займ. Неженатые и находящиеся в гражданском браке меньше обращаются за кредитом. Намного реже берут кредиты те, кто в разводе или одинокие.  
-Женщины чаще берут кредиты.  
-Сотрудники и компаньоны чаще обращаются за кредитом, чем пенсионеры. Госслужащие реже всех обращаются в банки.  
-Самая популярная цель займа - операции с недвижимостью. На втором и третьем местах по популярности - операции с автомобилями и получение образования, на последнем месте - проведение свадьбы.  
-За кредитом чаще обращаются клиенты не имеющие детей. Далее по количеству обращений находятся клиенты имеющие по одному, два и три ребёнка соответственно.  
-Средний возраст заёмщика - 39 лет.  
-8% заёмщиков имели проблемы с возвратом кредита.  
-Кредиты чаще берут граждане с доходом от 50 000 до 200 000 тыс, что является средними доходами. На втором месте по обращению за кредитами люди с доходом выше среднего.  
-С увеличением трудового стажа заёмщик реже обращается за кредитом.  Чаще берут кредиты клиенты с трудовым стажем до 10 лет. 
+### **Main Project Stages:**  
+1. **Data Loading**  
+2. **Exploratory Data Analysis**  
+3. **Research Questions**  
+4. **Machine Learning Model Development**  
+5. **Final Conclusions**  
 
-**Ответы на целевые вопросы анализа.**  
-Кредитоспособность заёмщиков с тремя детьми и бездетных выше остальных. Причём, кредитоспособность тех, кто имеет два ребёнка выше, чем тех у кого один.  
-Одинокие люди, которые имеют опыт брака легче возвращают долги, чем находящиеся в браке. Но при этом те, кто ещё не был в браке труднее расплачиваются с кредитами.  
-Заёмщики со средним уровнем дохода реже всех возвращают долги. На втором и третьем месте находятся клиенты с высоким и очень высоким уровнем дохода. Граждане, которые имеют доход ниже среднего легче возвращают долг.  
-Операции с автомобилем и получение образования являются категориями с очень высоким уровнем невозврата долгов. Операции с недвижимостью и проведение свадьбы - категрии, где самый низкий уровень невозврата.  
+### **Summary of Data Processing**  
+The provided data was in text format and required preprocessing for further analysis. During the exploratory data analysis, the following actions were taken:  
+- Identified and removed **both explicit and implicit duplicates**  
+- **Handled missing values**  
+- Changed **data types** for some features  
+- **Corrected negative values**  
+- **Removed outliers**  
+- **Categorized some features**  
 
-В ходе машинного обучения был исправлен дисбалан целевой переменной с помощью RandomOverSampler().  
-Выяснилось, что такие признаки, как уровень дохода, стаж, возраст являются основополагающими при принятии решения о выдачи кредита.  
-Для обучения модели мы использовали обучающее дерево как один из эффективных алгоритмов бинарной классификации.  
-Были использованы следующие метрики для оценки модели:  
-- accuracy 
-- precision 
-- recall 
-- f1  
-- confusion matrix
+### **Key Insights from Data Analysis**  
+- **Clients with secondary education** take loans most frequently, followed by those with higher education. Clients with unfinished higher education, primary education, or an academic degree take loans less frequently.  
+- **Married individuals** apply for loans most often. **Unmarried** individuals and those in a **civil partnership** apply for loans less frequently. **Divorced and single individuals** take loans the least often.  
+- **Women apply for loans more often than men.**  
+- **Employees and entrepreneurs** take loans more often than **retirees.** Government employees apply for loans the least frequently.  
+- The most **popular loan purpose** is **real estate transactions**, followed by **car purchases** and **education expenses**. The least common loan purpose is **wedding expenses**.  
+- Clients **without children** apply for loans most frequently, followed by those with **one, two, and three children** in descending order.  
+- The **average borrower age is 39 years**.  
+- **8% of borrowers had difficulty repaying their loans.**  
+- The majority of loan applicants earn between **50,000 and 200,000**, representing **middle-income** earners. The second largest group consists of individuals with **above-average income**.  
+- As **work experience increases, the likelihood of taking a loan decreases**. Clients with less than **10 years of experience** are the most frequent borrowers.  
 
-**AUC - 0.95**
+### **Key Findings on Creditworthiness**  
+- Borrowers with **three children and those without children** have the highest creditworthiness. **Clients with two children are more creditworthy than those with one child**.  
+- **Single individuals with prior marriage experience** repay debts more easily than **currently married individuals**. However, those who **have never been married** struggle the most with repayments.  
+- Borrowers with a **middle income level** struggle the most with debt repayment. Next are **high-income and very high-income clients**. Borrowers with **below-average income** tend to repay debts more easily.  
+- **Car purchases and education expenses** have **the highest loan default rates**, while **real estate transactions and wedding expenses** have the **lowest default rates**.  
+
+### **Machine Learning Implementation**  
+During machine learning model development, the class imbalance of the target variable was addressed using **RandomOverSampler()**.  
+
+Key findings:  
+- **Income level, work experience, and age** are the most important factors when deciding on loan approvals.  
+- A **decision tree** was used as a **binary classification algorithm** for training the model.  
+- The following metrics were used to evaluate model performance:  
+  - **Accuracy**  
+  - **Precision**  
+  - **Recall**  
+  - **F1-score**  
+  - **Confusion matrix**  
+  - **AUC (Area Under the Curve) = 0.95**  
+
+The results indicate that **income level, work experience, and age significantly influence credit approval decisions**. The developed model provides a solid foundation for optimizing **credit scoring** and minimizing financial risks for lending institutions.
