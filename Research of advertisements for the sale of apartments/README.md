@@ -1,37 +1,44 @@
-### Цель проекта
+### **Project Goal**  
 
-В нашем распоряжении данные сервиса Яндекс.Недвижимость — архив объявлений о продаже квартир в Санкт-Петербурге и соседних населённых пунктов за несколько лет. Нам нужно научиться определять рыночную стоимость объектов недвижимости на основе представленных параметров. Это позволит построить автоматизированную систему, которая, к тому же, отследит аномалии на рынке. По каждой квартире на продажу доступны два вида данных. Первые получены от пользователей, вторые —  автоматически, на основе картографических сведений, например, расстояние до центра города, аэропорта, ближайшего парка или водоёма.
+We have access to data from the **Yandex.Real Estate** service—an archive of apartment sale listings in **St. Petersburg and neighboring localities** over several years. Our task is to learn how to **determine the market value of real estate** based on the provided parameters. This will enable the development of an **automated system** that can also detect **market anomalies**.  
 
-### Были предоставлены данные со следующими харакетристиками:
+For each apartment listed for sale, two types of data are available:  
+- **User-submitted data**  
+- **Automatically generated data** based on cartographic information, such as **distance to the city center, airport, nearest park, or body of water**.  
 
-- `airports_nearest` — расстояние до ближайшего аэропорта в метрах (м)
-- `balcony` — число балконов
-- `ceiling_height` — высота потолков (м)
-- `cityCenters_nearest` — расстояние до центра города (м)
-- `days_exposition` — сколько дней было размещено объявление (от публикации до снятия)
-- `first_day_exposition` — дата публикации
-- `floor` — этаж
-- `floors_total` — всего этажей в доме
-- `is_apartment` — апартаменты (булев тип)
-- `kitchen_area` — площадь кухни в квадратных метрах (м²)
-- `last_price` — цена на момент снятия с публикации
-- `living_area` — жилая площадь в квадратных метрах (м²)
-- `locality_name` — название населённого пункта
-- `open_plan` — свободная планировка (булев тип)
-- `parks_around3000` — число парков в радиусе 3 км
-- `parks_nearest` — расстояние до ближайшего парка (м)
-- `ponds_around3000` — число водоёмов в радиусе 3 км
-- `ponds_nearest` — расстояние до ближайшего водоёма (м)
-- `rooms` — число комнат
-- `studio` — квартира-студия (булев тип)
-- `total_area` — общая площадь квартиры в квадратных метрах (м²)
-- `total_images` — число фотографий квартиры в объявлении
+### **The Provided Data Includes the Following Characteristics:**  
+- `airports_nearest` — distance to the nearest airport (in meters)  
+- `balcony` — number of balconies  
+- `ceiling_height` — ceiling height (in meters)  
+- `cityCenters_nearest` — distance to the city center (in meters)  
+- `days_exposition` — number of days the listing was active (from posting to removal)  
+- `first_day_exposition` — listing publication date  
+- `floor` — apartment floor  
+- `floors_total` — total number of floors in the building  
+- `is_apartment` — whether the property is classified as an apartment (boolean)  
+- `kitchen_area` — kitchen area (in square meters)  
+- `last_price` — price at the time of listing removal  
+- `living_area` — living area (in square meters)  
+- `locality_name` — name of the locality  
+- `open_plan` — whether the apartment has an open floor plan (boolean)  
+- `parks_around3000` — number of parks within a 3 km radius  
+- `parks_nearest` — distance to the nearest park (in meters)  
+- `ponds_around3000` — number of bodies of water within a 3 km radius  
+- `ponds_nearest` — distance to the nearest body of water (in meters)  
+- `rooms` — number of rooms  
+- `studio` — whether the apartment is a studio (boolean)  
+- `total_area` — total apartment area (in square meters)  
+- `total_images` — number of images in the listing  
 
-### Основные этапы проекта:
-1. Изучение данных.
-2. Предобработка данных.
-3. Анализ данных.
-4. Общий вывод.
+### **Main Project Stages:**  
+1. **Data Exploration**  
+2. **Data Preprocessing**  
+3. **Data Analysis**  
+4. **Final Conclusion**  
 
-### Общий итог:
-Анализ рынка недвижимости показывает, что цена квартиры зависит от многих факторов, которые нужно учитывать при покупке или продаже объектов. Некоторые факторы, такие как площадь, количество комнат и этаж, являются постоянными и не поддаются изменению. Другие аспекты, такие как дата публикации объявления и необходимость ремонта, являются переменными и могут быть использованы для оптимизации цены. Для успешной сделки нужно анализировать данные о рынке недвижимости и выбирать наиболее подходящий момент размещенения объявления.
+### **Key Takeaways:**  
+Real estate market analysis shows that **apartment prices depend on multiple factors**, which must be considered when buying or selling property.  
+
+Some factors, such as **total area, number of rooms, and floor level**, are **fixed** and cannot be changed. Other factors, like **listing publication date and the need for renovations**, are **variable** and can be **leveraged to optimize pricing**.  
+
+For a **successful transaction**, it is essential to **analyze real estate market data** and choose the **most suitable time** to list a property for sale.
