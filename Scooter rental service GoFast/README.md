@@ -1,62 +1,59 @@
-### Цель проекта
-Популярный сервис аренды самокатов GoFast. Чтобы совершать поездки по городу, клиенты пользуются мобильным приложением.
-Следует проанализировать следующие параметры, которые могут помочь бизнесу в развитии:
+# Project Objective
 
-- популярность сервиса в городах;
-- соотношение пользователей с подпиской и без;
-- возраст пользователей;
-- расстояние за одну поездку;
-- продолжительность поездок.
+The popular scooter rental service GoFast allows customers to make trips around the city using a mobile application. The following parameters should be analyzed to help business development:
+* Service popularity in cities
+* Ratio of users with and without subscription
+* User age
+* Distance per trip
+* Trip duration
 
-Проверим следующие гипотезы:
+We will test the following hypotheses:
+* Do subscription users spend more time on trips?
+* The average distance traveled by subscription users per trip does not exceed 3130 meters.
+* Will the monthly revenue from subscription users be higher than revenue from non-subscription users.
 
-- Тратят ли пользователи с подпиской больше времени на поездки?
-- Среднее расстояние, которое проезжают пользователи с подпиской за одну поездку не превышает 3130 метров.
-- Будет ли помесячная выручка от пользователей с подпиской по месяцам выше, чем выручка от пользователей без подписки.
+# Data Description
 
-### Описание данных
-Мы получили данные о пользователях, их поездках и подписках, которые содержатся в файлах CSV.
+We received data about users, their trips, and subscriptions contained in CSV files.
 
-***Пользователи*** — users_go.csv
-- 'user_id'- уникальный идентификатор пользователя
-- 'name' - имя пользователя
-- 'age' - возраст
-- 'city' - город
-- 'subscription_type' - тип подписки (free, ultra)
+***Users*** — users_go.csv
+* 'user_id' - unique user identifier
+* 'name' - username
+* 'age' - age
+* 'city' - city
+* 'subscription_type' - subscription type (free, ultra)
 
-***Поездки*** — rides_go.csv
-- 'user_id' - уникальный идентификатор пользователя
-- 'distance' - расстояние, которое пользователь проехал в текущей сессии (в метрах)
-- 'duration' - продолжительность сессии (в минутах) — время с того момента, как пользователь нажал кнопку «Начать поездку» до момента, как он нажал кнопку «Завершить поездку»
-- 'date' - дата совершения поездки
+***Trips*** — rides_go.csv
+* 'user_id' - unique user identifier
+* 'distance' - distance traveled by the user in the current session (in meters)
+* 'duration' - session duration (in minutes) — time from when the user pressed the "Start Trip" button until they pressed the "End Trip" button
+* 'date' - date of the trip
 
-***Подписки*** — subscriptions_go.csv
-- 'subscription_type' - тип подписки
-- 'minute_price	- стоимость одной минуты поездки по данной подписке
-- 'start_ride_price	- стоимость начала поездки
-- 'subscription_fee	- стоимость ежемесячного платежа  
+***Subscriptions*** — subscriptions_go.csv
+* 'subscription_type' - subscription type
+* 'minute_price' - cost of one minute of travel with this subscription
+* 'start_ride_price' - cost to start a trip
+* 'subscription_fee' - cost of monthly payment
 
-Сервисом можно пользоваться:
-- без подписки
-    - абонентская плата отсутствует;
-    - стоимость одной минуты поездки — 8 рублей;
-    - стоимость старта (начала поездки) — 50 рублей;
-- с подпиской Ultra
-    - абонентская плата — 199 рублей в месяц;
-    - стоимость одной минуты поездки — 6 рублей;
-    - стоимость старта — бесплатно.
+The service can be used:
+* without subscription
+   * no monthly fee
+   * cost of one minute of travel — 8 rubles
+   * cost of starting a trip — 50 rubles
+* with Ultra subscription
+   * monthly fee — 199 rubles per month
+   * cost of one minute of travel — 6 rubles
+   * cost of starting a trip — free
 
-### Этапы исследования
-1. Загрузка данных
-2. Предобработка данных
-3. Исследовательский анализ данных
-4. Объединение данных 
-5. Подсчёт данных
-6. Проверка гипотез
-7. Общий вывод
+# Research Stages
+1. Data loading
+2. Data preprocessing
+3. Exploratory data analysis
+4. Data merging
+5. Data calculation
+6. Hypothesis testing
+7. General conclusion
 
-### Итог исследования
-Таким образом, мы можем заключить, что сервис GoFast имеет потенциал для роста и развития на рынке аренды самокатов, но ему необходимо учитывать специфику разных городов и целевых аудиторий, а также стимулировать пользователей переходить на подписку Ultra.  
-Гипотеза о том, что пользователи с подпиской тратят за сессию в сервисе больше времени подтвердилась.  
-Гипотеза о том, что среднее расстояние, которое проезжают пользователи с подпиской за одну поездку не превышает оптимальных 3130 метров подтвердилась.  
-Гипотеза, что помесячная выручка от пользователей с подпиской выше, чем выручка от пользователей без подписки подтвердилась.
+# Research Conclusion
+
+Thus, we can conclude that the GoFast service has potential for growth and development in the scooter rental market, but it needs to consider the specifics of different cities and target audiences, as well as encourage users to switch to the Ultra subscription. The hypothesis that subscription users spend more time per session in the service was confirmed. The hypothesis that the average distance traveled by subscription users per trip does not exceed the optimal 3130 meters was confirmed. The hypothesis that monthly revenue from subscription users is higher than revenue from non-subscription users was confirmed.
