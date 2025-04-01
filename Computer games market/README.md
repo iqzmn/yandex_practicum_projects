@@ -1,47 +1,48 @@
-## Цель проекта
-Нам необходимо выявить определённые тенденции успешности игр в трёх регионах: Северная Америка, Европа и Япония. Это позволит сделать ставку на потенциально популярный продукт и спланировать рекламные кампании.
-Мы планируем кампанию на 2017 год, и, возможно, на более отдалённое будущее. На основе анализа необходимо выявить закономерности и отработотать принципы работы с данными. Это позволит делать прогнозы по продажам компьютерных игр, создавать успешные маркетинговые стратегии и даст более точное представление о рынке компьютерных игр.  
+# Project Objective
 
-Чтобы добиться поставленой задачи нам необходимо составить типичный портрет пользователя каждого региона продаж. Для этого рассмотрим следущие важные моменты:
-- выясним, сколько игр выпускалось в разные годы;
-- определим, как менялись продажи по платформам;
-- узнаем какие платформы лидируют по продажам;
-- оценим глобальные продажи игр в разбивке по платформам;
-- определим, как влияют на продажи внутри одной популярной платформы отзывы пользователей и критиков;
-- выявим общем распределении игр по жанрам.
+We need to identify certain trends in game success across three regions: North America, Europe, and Japan. This will allow us to bet on potentially popular products and plan advertising campaigns. We are planning a campaign for 2017, and possibly for the more distant future. Based on the analysis, we need to identify patterns and develop principles for working with data. This will allow us to make forecasts for computer game sales, create successful marketing strategies, and provide a more accurate picture of the computer game market.
 
-Также, нам необходимо проверить следующие гипотезы:
-- средние пользовательские рейтинги платформ Xbox One и PC одинаковые;
-- средние пользовательские рейтинги жанров Action и Sports разные.
+To achieve this goal, we need to create a typical user profile for each sales region. For this, we will consider the following important points:
 
-## Данные в наличии
-Из открытых источников доступны исторические данные о продажах игр, оценки пользователей и экспертов, жанры и платформы.  
-Вся информация до 2016 года.  
+* Determine how many games were released in different years
+* Understand how sales changed across platforms
+* Find out which platforms lead in sales
+* Evaluate global game sales by platform
+* Determine how user and critic reviews affect sales within one popular platform
+* Identify the general distribution of games by genre
 
-## Описание данных
-- _Name_ — название игры
-- _Platform_ — платформа
-- _Year_of_Release_ — год выпуска
-- _Genre_ — жанр игры
-- _NA_sales —_ продажи в Северной Америке (миллионы проданных копий)
-- _EU_sales_ — продажи в Европе (миллионы проданных копий)
-- _JP_sales_ — продажи в Японии (миллионы проданных копий)
-- _Other_sales —_ продажи в других странах (миллионы проданных копий)
-- _Critic_Score_ — оценка критиков (максимум 100)
-- _User_Score_ — оценка пользователей (максимум 10)
-- _Rating_ — рейтинг от организации _ESRB_ 
+Also, we need to test the following hypotheses:
+* The average user ratings for Xbox One and PC platforms are the same
+* The average user ratings for Action and Sports genres are different
 
-ESRB (англ. _Entertainment Software Rating Board). Это ассоциация, определяющая возрастной рейтинг компьютерных игр. ESRB оценивает игровой контент и присваивает ему подходящую возрастную категорию, например, "Для взрослых", "Для детей младшего возраста" или "Для подростков".
+## Available Data
 
-## Этапы исследования
-- предобработка данных
-- исследовательский анализ данных
-- составление портрета пользователя каждого региона
-- проверка гипотез
-- общий вывод
+Historical data on game sales, user and expert ratings, genres, and platforms are available from open sources. All information is up to 2016.
 
-## Итог исследования
-Продажи компьютерных игр варьировались в разные годы. Успешность реализации зависит от возраста, жанра, региона, платформы, оценок пользователей и критиков.  
-Гипотезу о том, что средние пользовательские рейтинги жанров Action и Sports разные опровергнуть не удалось.  
-Гипотезу о том, что средние пользовательские рейтинги платформ Xbox One и PC одинаковые, опровергнуть не удалось.  
-(Более подробный отчёт в "Общем выводе" аналитического файла)
+## Data Description
+
+* *Name* — game title
+* *Platform* — platform
+* *Year_of_Release* — release year
+* *Genre* — game genre
+* *NA_sales* — sales in North America (millions of copies sold)
+* *EU_sales* — sales in Europe (millions of copies sold)
+* *JP_sales* — sales in Japan (millions of copies sold)
+* *Other_sales* — sales in other countries (millions of copies sold)
+* *Critic_Score* — critics' score (maximum 100)
+* *User_Score* — users' score (maximum 10)
+* *Rating* — rating from the *ESRB* organization
+
+ESRB (Entertainment Software Rating Board) is an association that determines the age rating of computer games. ESRB evaluates game content and assigns it an appropriate age category, for example, "For Adults," "For Young Children," or "For Teens."
+
+## Research Stages
+
+* Data preprocessing
+* Exploratory data analysis
+* Creating a user profile for each region
+* Testing hypotheses
+* General conclusion
+
+## Research Summary
+
+Computer game sales varied in different years. The success of implementation depends on age, genre, region, platform, user and critic ratings. The hypothesis that the average user ratings for Action and Sports genres are different could not be refuted. The hypothesis that the average user ratings for Xbox One and PC platforms are the same could not be refuted. A more detailed report is provided in the "General Conclusion" of the analytical file.
